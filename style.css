@@ -10,7 +10,7 @@
 html,
 body {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 #mf-header-top {
@@ -25,17 +25,17 @@ body {
 }
 
 #mf-header-top ul {
-  border: 1px solid #000;
+  border: 2px solid #652951;
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   width: 100%;
   height: 75px;
-  background-color: rgb(146, 70, 121);
+  background-color: #924679;
   color: #fff;
 }
- 
+
 
 #mf-header-top ul li {
   display: flex;
@@ -54,7 +54,7 @@ font-family: 'Libre Bodoni', serif;
   color: inherit;
 }
 #mf-header-top ul li figure {
-  width: 60px;
+  width: 70px;
   height: 60px;
 }
 #mf-header-top ul li figure img{
@@ -63,10 +63,38 @@ font-family: 'Libre Bodoni', serif;
 }
 
 #mf-section-header{
-  border: 2px solid rgb(255, 1, 1);
   padding-top: 120px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  background-color: #000;
+}
+
+#mf-section-header h1{
+  font-size: 5em;
+  text-align: center;
+  color: #fff;
+}
+
+#mf-section-header figure{
+  border: 1px solid #000;
+  width: 520px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mf-section-header img{
+  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+}
+#mf-section-header p{
+  border: 1px solid #000;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
 }
 
 img{ 
