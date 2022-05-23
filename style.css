@@ -96,3 +96,41 @@ font-family: 'Libre Bodoni', serif;
   margin-top: 20px;
   color: #fff;
 }
+
+img{ 
+  width:200px;
+  height:200px;
+
+}
+
+
+.fa_solutionbio{
+  display:flex;
+
+  /* animation: photo ease 2s forwards; */
+
+}
+
+.fa_photo{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.fa_item{
+ 
+  animation: 3s ease 1s forwards running photo;
+}
+
+@keyframes photo{
+
+  from{
+      transform: translateX(50px);
+      opacity:0;
+  }
+  to{
+     transform: translateX(50%);
+      opacity:1;
+  }
+
+}
