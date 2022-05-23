@@ -193,6 +193,7 @@ font-family: 'Plus Jakarta Sans', sans-serif; */
   color: #fff;
 }
 
+
 img{ 
   width:200px;
   height:200px;
@@ -233,3 +234,20 @@ img{
   }
 
 }
+
+/* Section S_K présentation de l'entreprise */
+
+.S_KLe_projet_MoonLight {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+}
+
+.S_KLe_projet_MoonLight .article {
+  font-family: 'Libre Bodoni', serif;
+  color: #fff;
+  text-align: justify;
+
+
+}
+
