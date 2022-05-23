@@ -88,7 +88,7 @@ font-family: 'Plus Jakarta Sans', sans-serif; */
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moonStart 2s linear both, shockwaveJump 1s 2.1s ease-out infinite;
+  animation: moonStart 2.5s linear both, shockwaveJump 1s 2.1s ease-out infinite;
   position: absolute;
 }
 #mf-section-header figure:after{
@@ -191,4 +191,45 @@ font-family: 'Plus Jakarta Sans', sans-serif; */
   bottom: 150px;
   width: 100%;
   color: #fff;
+}
+
+img{ 
+  width:200px;
+  height:200px;
+
+}
+
+
+.fa_solutionbio{
+  display:flex;
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+
+  /* animation: photo ease 2s forwards; */
+
+}
+
+.fa_photo{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.fa_item{
+ 
+  animation: 3s ease 1s forwards running photo;
+}
+
+@keyframes photo{
+
+  from{
+      transform: translateX(50px);
+      opacity:0;
+  }
+  to{
+     transform: translateX(50%);
+      opacity:1;
+  }
+
 }
