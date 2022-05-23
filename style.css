@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Plus+Jakarta+Sans:wght@200&display=swap');
 *,
 *::after,
 *::before {
@@ -10,4 +11,60 @@ html,
 body {
   height: 100vh;
   width: 100vw;
+}
+
+#mf-header-top {
+  width: 600px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: calc(50% - 300px);
+  display: flex;
+  align-items: center;
+  height: 110px;
+}
+
+#mf-header-top ul {
+  border: 1px solid #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  height: 75px;
+  background-color: rgb(146, 70, 121);
+  color: #fff;
+}
+
+
+#mf-header-top ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  /* font-family: 'Libre Bodoni', serif;
+font-family: 'Plus Jakarta Sans', sans-serif; */
+font-family: 'Libre Bodoni', serif;
+/* font-family: 'Plus Jakarta Sans', sans-serif; */
+}
+
+#mf-header-top ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+#mf-header-top ul li figure {
+  width: 60px;
+  height: 60px;
+}
+#mf-header-top ul li figure img{
+  width: 100%;
+  height: 100%;
+}
+
+#mf-section-header{
+  border: 2px solid rgb(255, 1, 1);
+  padding-top: 120px;
+  width: 100vw;
+  height: 100vh;
 }
