@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Plus+Jakarta+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Cormorant+Upright:wght@300&display=swap');
 
 *,
 *::after,
@@ -14,9 +19,6 @@ body {
   width: 100%;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
 
 #mf-header-top {
   width: 600px;
@@ -30,14 +32,14 @@ body::-webkit-scrollbar {
 }
 
 #mf-header-top ul {
-  border: 2px solid rgb(59, 19, 45);
+  border: 2px solid #652951;
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   width: 100%;
   height: 75px;
-  background-color: #3a036c;
+  background-color: #924679;
   color: #fff;
 }
 
@@ -49,190 +51,61 @@ body::-webkit-scrollbar {
   font-size: 1.5em;
   font-weight: bold;
   /* font-family: 'Libre Bodoni', serif;
-font-family: 'Plus Jakarta Sans', sans-serif; */
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif; */
+  /* font-family: 'Libre Bodoni', serif; */
   /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  /* font-family: 'Metamorphous',serif; */
+  font-family: 'Righteous', serif;
 }
 
 #mf-header-top ul li a {
   text-decoration: none;
   color: inherit;
 }
-
 #mf-header-top ul li figure {
   width: 70px;
   height: 60px;
 }
-
-#mf-header-top ul li figure img {
+#mf-header-top ul li figure img{
   width: 100%;
   height: 100%;
 }
 
-#mf-section-header {
+#mf-section-header{
   padding-top: 120px;
   width: 100%;
   height: 100vh;
   background-color: #000;
 }
 
-#mf-section-header h1 {
+#mf-section-header h1{
   font-size: 5em;
   text-align: center;
   color: #fff;
+  font-family: 'Playfair Display SC', serif;
 }
 
-#mf-section-header figure {
+#mf-section-header figure{
+  border: 1px solid #000;
   width: 520px;
   height: 500px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moonStart 2.5s linear both, shockwaveJump 1s 2.1s ease-out infinite;
-  position: absolute;
 }
-#mf-section-header figure:after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 50%;
-  animation: shockwave 1s 2.1s ease-out infinite;
-}
-#mf-section-header figure:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 50%;
-  animation: shockwave 1s 2.3s ease-out infinite;
-}
-
-@keyframes moonStart {
-  0%{
-    top:80%;
-    left: -17%;
-  }
-  15%{
-    top:60%;
-    left: -12%;
-  }
-  33%{
-    top:40%;
-    left: -2%;
-  }
-  50%{
-    top:30%;
-    left: 8%;
-  }
-  66%{
-    top:25%;
-    left: 18%;
-  }
-  100%{
-    top:20%;
-    left: 38%;
-  }
-}
-@keyframes shockwaveJump {
-    0% {
-        transform: scale(1);
-    }
-
-    40% {
-        transform: scale(1.08);
-    }
-
-    50% {
-        transform: scale(0.98);
-    }
-
-    55% {
-        transform: scale(1.02);
-    }
-
-    60% {
-        transform: scale(0.98);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-@keyframes shockwave {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 2px rgba(255, 255, 255, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.15);
-    }
-
-    95% {
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0), inset 0 0 30px rgba(255, 255, 255, 0);
-    }
-
-    100% {
-        transform: scale(1.4);
-    }
-}
-
-#mf-section-header img {
+#mf-section-header img{
+  border: 1px solid #000;
   width: 100%;
   height: 100%;
 }
-
-#mf-section-header p {
+#mf-section-header p{
   border: 1px solid #000;
   font-size: 3em;
   text-align: center;
-  position: absolute;
-  bottom: 150px;
-  width: 100%;
+  margin-top: 20px;
   color: #fff;
-}
-
-
-img{ 
-  width:200px;
-  height:200px;
-
-}
-
-
-.fa_solutionbio{
-  display:flex;
-  padding-top: 120px;
-  width: 100%;
-  height: 100vh;
-
-  /* animation: photo ease 2s forwards; */
-
-}
-
-.fa_photo{
-  display:flex;
-  flex-direction:column;
-
-}
-
-.fa_item{
- 
-  animation: 3s ease 1s forwards running photo;
-}
-
-@keyframes photo{
-
-  from{
-      transform: translateX(50px);
-      opacity:0;
-  }
-  to{
-     transform: translateX(50%);
-      opacity:1;
-  }
-
+  font-family: 'Righteous', serif;
 }
 
 /* Section S_K présentation de l'entreprise */
@@ -241,13 +114,129 @@ img{
   padding-top: 120px;
   width: 100%;
   height: 100vh;
+  background-image: url(https://c.wallhere.com/photos/6c/23/2560x1600_px_Earth_Satellite_space-1061995.jpg!d);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.S_KLe_projet_MoonLight .article {
-  font-family: 'Libre Bodoni', serif;
-  color: #fff;
+.S_KLe_projet_MoonLight h1 {
+  margin: 0 0 15px 0;
+  padding: 0 10px;
+  color: #effbfb;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Righteous', serif;
+
+}
+
+.citation {
+  margin: 0 0 100px 0;
+  font-size: 25px;
+  font-style: italic;
+  font-family: 'Cormorant Upright', serif;
+}
+.S_KLe_projet_MoonLight .S_K_article1 {
+  font-family: 'Comfortaa', cursive;
+  color: white;
   text-align: justify;
 
+}
+
+.S_K_article1 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 0 10px;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+
+
+#S_Ktwitter:hover {
+  transform: scale(1.1) ;
+}
+#S_Kposition:hover {
+  transform: scale(1.1);
+}
+#NuméroTel:hover {
+  transform: scale(1.1);
+}
+.S_K_Solution_Lune_artificielle {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.wallpapersafari.com/9/97/T75d1v.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.S_K_Solution_Lune_artificielle h1 {
+  font-family: 'Righteous', serif;
+  margin: 0 0 100px 0;
+  padding: 0 10px;
+  color: white;
+  font-size: 30px;
+
 
 }
 
+.S_K_Solution_Lune_artificielle .S_K_article2 {
+  font-family: 'Comfortaa', cursive;
+  color: whitesmoke;
+
+
+}
+
+.S_K_article2 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 0 10px;
+  font-size: 20px;
+  letter-spacing: 10px;
+
+}
+
+.IconContact {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: end;
+  padding: 0 50px 0 0;
+  width: 100%;
+  height: 100vh;
+  transform: scale(1);
+}
+
+.Telephone {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+.S_Kcontact header h1 {
+  padding: 30px 10px;
+  font-family: 'Righteous', serif;
+  font-size: 30px;
+
+}
+
+
+
+footer {
+  width: 100%;
+  background-image: url(/img/team.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Les4Fantastiques {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-family: 'Cormorant Upright', serif;
+  font-weight: bold;
+  font-size: 20px;
+}
