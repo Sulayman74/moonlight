@@ -17,6 +17,28 @@ html,
 body {
   height: 100vh;
   width: 100%;
+  scroll-behavior: smooth;
+}
+
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+main section {
+  background-blend-mode: multiply;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar,
+main::-webkit-scrollbar
+{
+  display: none;
 }
 
 
@@ -29,17 +51,19 @@ body {
   display: flex;
   align-items: center;
   height: 110px;
+  transition: top .4s linear;
+  z-index: 99;
 }
 
 #mf-header-top ul {
-  border: 2px solid #652951;
+
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   width: 100%;
   height: 75px;
-  background-color: #924679;
+
   color: #fff;
 }
 
@@ -76,6 +100,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #000;
+  overflow: hidden;
 }
 
 #mf-section-header h1{
@@ -84,6 +109,7 @@ body {
   color: #fff;
   font-family: 'Playfair Display SC', serif;
 }
+
 
 #mf-section-header figure{
   border: 1px solid #000;
@@ -96,8 +122,225 @@ body {
 }
 #mf-section-header img{
   border: 1px solid #000;
+
+#mf-section-header #kevin {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 700px;
+  padding: 0 0 150px 50px;
+  animation: tourne 2s linear both;
+}
+
+#mf-section-header #kevin.ciao {
+  animation: retourne 2s linear both;
+}
+
+#mf-section-header figure {
+  width: 420px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moonStart 2s linear both, shockwaveJump 3s 2.1s ease-out infinite;
+  position: relative;
+  top: calc(100% - 400px);
+}
+
+#mf-section-header figure:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  animation: shockwave 1s 2.1s ease-out infinite;
+}
+
+#mf-section-header figure:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  animation: shockwave 1s 2.3s ease-out infinite;
+}
+
+@keyframes tourne {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+    left: calc(25%);
+  }
+}
+
+@keyframes retourne {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+    left: calc(50%);
+  }
+}
+
+@keyframes tourneInverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes retourneInverse {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+/* @keyframes moonStart {
+  0%{
+    top:70%;
+    left: -10%;
+  }
+  12.5%{
+    top:50%;
+    left: -5%;
+  }
+  25%{
+    top:40%;
+    left: 0%;
+  }
+  37.5%{
+    top:30%;
+    left: 5%;
+  }
+  50%{
+    top:25%;
+    left: 10%;
+  }
+  62.5%{
+    top:20%;
+    left: 15%;
+  }
+  75%{
+    top:15%;
+    left: 22%;
+  }
+  87.5%{
+    top:12.5%;
+    left: 29%;
+  }
+  100%{
+    top:10%;
+    left: 38%;
+  }
+  /* 12.5%{
+    top:50%;
+    left: -5%;
+  }
+  25%{
+    top:45%;
+    left: 0%;
+  }
+  37.5%{
+    top:40%;
+    left: 5%;
+  }
+  50%{
+    top:35%;
+    left: 10%;
+  }
+  62.5%{
+    top:30%;
+    left: 15%;
+  }
+  75%{
+    top:26%;
+    left: 23%;
+  }
+  87.5%{
+    top:23%;
+    left: 30%;
+  }
+  100%{
+    top:20%;
+    left: 36%;
+  } 
+} */
+@keyframes shockwaveJump {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.08);
+  }
+
+  50% {
+    transform: scale(0.98);
+  }
+
+  55% {
+    transform: scale(1.02);
+  }
+
+  60% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+
+  95% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0), inset 0 0 30px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+#mf-section-header img {
+
+#mf-section-header figure{
+  border: 1px solid #000;
+  width: 520px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mf-section-header img{
+  border: 1px solid #000;
+
   width: 100%;
   height: 100%;
+  animation: tourneInverse 2s linear both;
 }
 #mf-section-header p{
   border: 1px solid #000;
@@ -109,6 +352,32 @@ body {
 }
 
 /* Section S_K présentation de l'entreprise */
+
+
+.S_KLe_projet_MoonLight {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://c.wallhere.com/photos/6c/23/2560x1600_px_Earth_Satellite_space-1061995.jpg!d);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.S_KLe_projet_MoonLight h1 {
+  margin: 0 0 15px 0;
+  padding: 0 10px;
+  color: #effbfb;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Righteous', serif;
+}
+
+/* Section S_K présentation de l'entreprise */
+
+
+img {
+  width: 200px;
+  height: 200px;
 
 .S_KLe_projet_MoonLight {
   padding-top: 120px;
@@ -140,6 +409,18 @@ body {
   color: white;
   text-align: justify;
 
+.citation {
+  margin: 0 0 100px 0;
+  font-size: 25px;
+  font-style: italic;
+  font-family: 'Cormorant Upright', serif;
+}
+.S_KLe_projet_MoonLight .S_K_article1 {
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  text-align: justify;
+
+
 }
 
 .S_K_article1 {
@@ -151,6 +432,13 @@ body {
   letter-spacing: 10px;
 }
 
+.fa_solutionbio {
+  display: flex;
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+
 
 
 #S_Ktwitter:hover {
@@ -158,6 +446,16 @@ body {
 }
 #S_Kposition:hover {
   transform: scale(1.1);
+=======
+}
+
+.S_K_article1 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 0 10px;
+  font-size: 20px;
+  letter-spacing: 10px;
 }
 #NuméroTel:hover {
   transform: scale(1.1);
@@ -179,8 +477,75 @@ body {
   font-size: 30px;
 
 
+
+
+#S_Ktwitter:hover {
+  transform: scale(1.1) ;
+}
+#S_Kposition:hover {
+  transform: scale(1.1);
+}
+#NuméroTel:hover {
+  transform: scale(1.1);
+}
+.S_K_Solution_Lune_artificielle {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.wallpapersafari.com/9/97/T75d1v.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+
+.fa_photo {
+  display: flex;
+  flex-direction: column;
+
+
+
+
+}
+.S_K_Solution_Lune_artificielle h1 {
+  font-family: 'Righteous', serif;
+  margin: 0 0 100px 0;
+  padding: 0 10px;
+  color: white;
+  font-size: 30px;
+  }
+
+.S_K_Solution_Lune_artificielle .S_K_article2 {
+  font-family: 'Comfortaa', cursive;
+  color: whitesmoke;
+  }
+
+.fa_item {
+
+  animation: 3s ease 1s forwards running photo;
+}
+
+@keyframes photo {
+
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+
+}
+
+.S_K_article2 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 0 10px;
+  font-size: 20px;
+  letter-spacing: 10px;
+  }
 .S_K_Solution_Lune_artificielle .S_K_article2 {
   font-family: 'Comfortaa', cursive;
   color: whitesmoke;
@@ -195,7 +560,6 @@ body {
   padding: 0 10px;
   font-size: 20px;
   letter-spacing: 10px;
-
 }
 
 .IconContact {
@@ -222,8 +586,15 @@ body {
   font-family: 'Righteous', serif;
   font-size: 30px;
 
+
 }
 
+.S_Kcontact header h1 {
+  padding: 30px 10px;
+  font-family: 'Righteous', serif;
+  font-size: 30px;
+
+}
 
 
 footer {
